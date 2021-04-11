@@ -1,6 +1,7 @@
 # Practicing React
+> will make different toy projects to try react
 
-1. tic-tac-toe
+## 1. tic-tac-toe
 > the official react page tutorial
 
 - [x] 0. finish building the game, no extras
