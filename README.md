@@ -25,3 +25,24 @@
     - checked if stepNumber == 9 and changed to status to display Draw
 - [x] extra. add a reset game button that shows when there is a winner or the game is a draw
     - set all the states to the initial values
+
+<br>
+
+## 2. Traversy Media (task tracker)
+> [youtube tutorial](https://www.youtube.com/watch?v=w7ejDZ8SWv8)
+
+- before: function components -> `states`(X)  but now they can use states using **hooks**
+    - useState: returns a stateful value and a function to update it 
+    - useEffect: perform side effects in function components
+
+- jsx can only have one parent element
+    - <></> empty brackets can be used to have no parents
+- `ES7 React/Redux/GraphQL/React-Native snippets` extension
+    - **rafce** to create boilderplate arrow function and export
+- `<component>.defaultProps`
+- `<component>.propTypes` **lowercase!**
+    - `impt`: import propTypes
+    - .isRequired can be used -> without this only a warning is given
+- inline styling: make a dictionary below and add to component with brackets
+- &&: ternary without an else
+- continue from [bookmark](https://youtu.be/w7ejDZ8SWv8?t=4565)
