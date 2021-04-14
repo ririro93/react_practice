@@ -45,4 +45,25 @@
     - .isRequired can be used -> without this only a warning is given
 - inline styling: make a dictionary below and add to component with brackets
 - &&: ternary without an else
-- continue from [bookmark](https://youtu.be/w7ejDZ8SWv8?t=4565)
+- `npm run build`: create production build in dir called build
+    - everything else other than build dir is dev stuff
+- to serve build dir: `serve -s build -p 4000`
+- Mock backend: [JSON Server](https://www.npmjs.com/package/json-server)
+- react-router-dom
+    - <Router path="/" exact/>: without exact path="/about" is also routed here
+    - use Link instead of a tags to prevent page reload
+    - useLocation: can get my current path and use that info
+
+<br>
+
+## 3. TMDB Movie Review
+> try making a simple movie review website using the TMDB API
+
+### Goals
+- making CRUD for review posts
+- get data from TMDB API
+- save data to django REST framework
+
+### extra features
+- add movie ratings with stars
+
