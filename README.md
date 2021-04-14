@@ -67,3 +67,11 @@
 ### extra features
 - add movie ratings with stars
 
+### Learned
+[backend]
+- how to set min, max to models.IntegerField
+    ```python
+    from django.core.validators import MinValueValidator, MaxValueValidator
+    rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
+    ```
+

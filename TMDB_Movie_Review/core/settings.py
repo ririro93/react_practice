@@ -21,6 +21,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # custom
     'accounts',
+    'reviews',
     
     # 3rd party
     'rest_framework',
