@@ -1,21 +1,36 @@
 import { useState, useEffect } from 'react';
 
+import Review from '../components/Review';
+
 const ReviewsPage = () => {
-  const [reviewsList, setReviewsList] = useState([])
+  const [reviews, setReviews] = useState([])
+
+  useEffect(() => {
+    fetchAndSetReviews();
+  }, []);
 
   // fetch reviews list from django rest API
-  const fetchReviews = async () => {
-    // const res = await fetch('http://localhost:8000/reviews');
-    // const data = await res.json();
+  const fetchAndSetReviews = async () => {
+    const res = await fetch('http://localhost:8000/api/reviews');
+    const data = await res.json();
 
-    // console.log(data);
-    console.log('refresh list');
+    setReviews(data);
   }
+
+  // reviews
 
   return (
     <div className="container">
       <h1>Movie Review List</h1>
-      <button onClick={() => fetchReviews()}>refresh reviews list</button>
+      <button className="m-3" onClick={fetchAndSetReviews}>refresh reviews list</button>
+      <div className="row">
+        {reviews.map((review) => (
+          <Review
+          key={review.id}
+          review={review}
+          />
+        ))}
+      </div>
     </div>
   )
 }
