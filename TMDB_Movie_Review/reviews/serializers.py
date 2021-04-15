@@ -8,6 +8,7 @@ class MovieSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class ReviewSerializer(serializers.ModelSerializer):
+    # for response to react
     class Meta:
         model = Review
-        fields = '__all__'
+        fields = ['id', 'movie', 'content', 'rating', 'created_at', 'updated_at', 'movie', 'author']
