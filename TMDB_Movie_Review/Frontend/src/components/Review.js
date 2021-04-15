@@ -36,7 +36,7 @@ const Review = ({ review }) => {
         </div>
         <ul className="list-group list-group-flush">
           <li className="list-group-item">Rating: {"❤".repeat(review.rating) + "🖤".repeat(5-review.rating)}</li>
-          <li className="list-group-item">Author: {review.author}</li>
+          <li className="list-group-item">Author: {author.username}</li>
           <li className="list-group-item">poster</li>
         </ul>
         <div className="card-body">
