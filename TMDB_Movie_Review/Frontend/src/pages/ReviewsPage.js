@@ -20,20 +20,17 @@ const ReviewsPage = () => {
     setReviews(data);
   }
 
-  const movies = reviews.map((review) => (
-    <Review
-      key={review.id}
-      review={review}
-    />
-  ))
-
-
   return (
     <div className="container">
       <h1>Movie Review List</h1>
       <button className="m-3" onClick={fetchAndSetReviews}>refresh reviews list</button>
       <div className="row">
-        {movies}
+        {reviews.map((review) => (
+          <Review
+            key={review.id}
+            review={review}
+          />
+        ))}
       </div>
     </div>
   )

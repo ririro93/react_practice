@@ -1,7 +1,7 @@
-from rest_framework import routers
 from django.urls import path, include
 from django.contrib import admin
 from django.contrib.auth import get_user_model
+from rest_framework import routers
 
 from accounts.views import CustomUserViewSet
 from reviews.views import MovieViewSet, ReviewViewSet
@@ -18,4 +18,6 @@ router.register(r'users', CustomUserViewSet, 'users')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]

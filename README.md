@@ -74,4 +74,13 @@
     from django.core.validators import MinValueValidator, MaxValueValidator
     rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
     ```
-
+- would like serializers to give info of foreignkey objects not just their id
+    - using serialzer within serializers allows sending object info
+    - -> however, prob when creating the same object with POST request
+    
+[frontend]
+- movie info is connected to a review with a foreignkey
+    - tried passing this to a `<Review />` component using props 
+    - -> data didn't render right becuase it was only a promise
+    - [solution]: fetched the movie info within the `<Review />` component using useState and useEffect
+    - -> still would be easier movie info could be passed down using props (needs more googling)
